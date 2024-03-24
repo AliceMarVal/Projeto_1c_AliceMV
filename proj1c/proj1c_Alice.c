@@ -8,7 +8,7 @@
 #define levmax 3
 #define amax 2047
 
-enum fct 
+enum fct
 {
     LIT,
     OPR,
@@ -67,8 +67,8 @@ void include(fct f, int l, int a,int n){
 void pcodevhw()
 { // begin
     printf("\n start pl/0");
-    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15");
-    printf("\n === === ===   === === ===             === === === === === === === === === === === === === === === ===");
+    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17");
+    printf("\n === === ===   === === ===              === === === === === === === === === === === === === === === === === ===");
     t = -1; // topstack-register
     b = 0;  // base-register
     p = 0;  // program-register
@@ -301,8 +301,8 @@ void pcodevhw()
         }
     } while (p != 0);
 
-    printf("\n === === ===   === === ===             === === === === === === === === === === === === === === === ===");
-    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15");
+    printf("\n === === ===   === === ===              === === === === === === === === === === === === === === === === === ===");
+    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17");
     printf("\n end pl/0");
 } // end-void-pcmachine() {interpret};
 
