@@ -8,7 +8,7 @@
 #define levmax 3
 #define amax 2047
 
-typedef enum 
+enum fct 
 {
     LIT,
     OPR,
@@ -18,7 +18,7 @@ typedef enum
     INT,
     JMP,
     JPC
-}fct;
+};
 
 typedef struct tinstruction
 {
