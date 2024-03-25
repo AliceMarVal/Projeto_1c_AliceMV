@@ -295,8 +295,11 @@ void pcodevhw()
 
         // print stack
         printf("      s[] : ");
-        for (int h = 0; h <= 17; h++)
+        for (int h = 0; h <= t; h++)
         {
+            if(h > 14){
+                break;
+            }
             printf(" %3d", s[h]);
         }
     } while (p != 0);
