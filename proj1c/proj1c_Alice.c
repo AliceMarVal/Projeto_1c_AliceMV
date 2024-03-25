@@ -8,7 +8,7 @@
 #define levmax 3
 #define amax 2047
 
-enum fct
+typedef enum
 {
     LIT,
     OPR,
@@ -18,7 +18,7 @@ enum fct
     INT,
     JMP,
     JPC
-};
+}fct;
 
 typedef struct tinstruction
 {
@@ -67,8 +67,8 @@ void include(fct f, int l, int a,int n){
 void pcodevhw()
 { // begin
     printf("\n start pl/0");
-    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17");
-    printf("\n === === ===   === === ===              === === === === === === === === === === === === === === === === === ===");
+    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14");
+    printf("\n === === ===   === === ===              === === === === === === === === === === === === === === ===");
     t = -1; // topstack-register
     b = 0;  // base-register
     p = 0;  // program-register
@@ -297,15 +297,15 @@ void pcodevhw()
         printf("      s[] : ");
         for (int h = 0; h <= t; h++)
         {
-            if(h > 14){
+            if(h > 13){
                 break;
             }
             printf(" %3d", s[h]);
         }
     } while (p != 0);
 
-    printf("\n === === ===   === === ===              === === === === === === === === === === === === === === === === === ===");
-    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17");
+    printf("\n === === ===   === === ===              === === === === === === === === === === === === === === ===");
+    printf("\n p   b   t     f   l   a                 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14");
     printf("\n end pl/0");
 } // end-void-pcmachine() {interpret};
 
